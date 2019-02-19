@@ -10,16 +10,15 @@
 
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
         
-    <!--fzmdo1-->
+
     <!-- Web App Manifest -->
-    <!-- <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json"> -->
+    <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
 
-    <!--fzmdo2-->
     <!-- Safari Webpage Icon    by-BY -->
-    <!-- <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/apple-touch-icon.png"> -->
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/apple-touch-icon.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -30,7 +29,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/hux-blog.css" | prepend: site.baseurl }}">
 
-    <!--fzmdo4-->
     <!-- Pygments Github CSS -->
     <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 
