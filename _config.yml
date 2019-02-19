@@ -13,6 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
+# 网站设置---------------------------------------------------------------------------------------------------------------
 title: Joyce Blog title
 SEOTitle: Joyce'Blog
 header-img: img/post-bg-desk.jpg
@@ -26,28 +28,58 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # github_repo: "https://github.com/JoyceFangmm/JoyceFangmm.github.io.git"
 
-# Build settings
-markdown: kramdown
+
+# Build settings---------------------------------------------------------------------------------------------------------------
+# markdown: kramdown
 # theme: minima      #default jekyll theme
 plugins:
   - jekyll-feed
   - jekyll-paginate
 
-# Exclude from processing.
+
+# Exclude from processing----------------------------------------------------------------------------------------------------
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
   # - Gemfile
   # - Gemfile.lock
-#   - node_modules
+  - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+  - less
+  - Gruntfile.js
+  - package.json
+  - README.md
 
 
+# Markdown settings---------------------------------------------------------------------------------------------------------------
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
 
-# Build settings
+
+# 评论系统---------------------------------------------------------------------------------------------------------------
+# Disqus（https://disqus.com/）
+# disqus_username: qiubaiying
+
+# Gitalk
+gitalk:
+  enable: true    #是否开启Gitalk评论
+  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
+  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
+  repo: joycefangmm.github.io    #仓库名称
+  owner: joycefangmm    #github用户名
+  admin: joycefangmm
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+  
+
+# 分页设置---------------------------------------------------------------------------------------------------------------
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 permalink: pretty
 paginate: 10
@@ -55,33 +87,39 @@ paginate: 10
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-# Progressive Web Apps
+# Progressive Web Apps---------------------------------------------------------------------------------------------------------------
 chrome-tab-theme-color: "#000000"
 # service-worker: true
 
-# Featured Tags
+
+# Featured Tags---------------------------------------------------------------------------------------------------------------
 featured-tags: false                     # 是否使用首页标签
 featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 
 
-# Sidebar settings
+# Sidebar settings---------------------------------------------------------------------------------------------------------------
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
 sidebar-avatar: /img/about-JoyceFang-gentle.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
+
+# 统计---------------------------------------------------------------------------------------------------------------
+# Analytics settings
+# Baidu Analytics
+ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
 # ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
-# SNS settings
+# SNS settings---------------------------------------------------------------------------------------------------------------
 RSS: true
 twitter_username: joycefang
 github_username:  joycefangmm
 
 
-# Friends
+# Friends---------------------------------------------------------------------------------------------------------------
 friends: [
     {
         title: "Google",
