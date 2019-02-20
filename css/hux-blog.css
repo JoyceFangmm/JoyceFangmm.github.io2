@@ -1,7 +1,10 @@
-/*!
- * Hux Blog v1.7.0 (http://huxpro.github.io)
- * Copyright 2018 Hux <huxpro@gmail.com>
- */
+
+ :root{
+  --global-var: 'global';
+  /* --theme-color: #99CCFF; */
+  --theme-color: #0099CC;
+  /* --theme-color: #6699CC; */
+}
 
 @media (min-width: 1200px) {
   .post-container,
@@ -31,14 +34,14 @@
 }
 .sidebar-container a:hover,
 .sidebar-container a:active {
-  color: #0085a1 !important;
+  color: var(--theme-color) !important;
 }
 .sidebar-container .tags a {
   border-color: #bfbfbf;
 }
 .sidebar-container .tags a:hover,
 .sidebar-container .tags a:active {
-  border-color: #0085a1;
+  border-color: var(--theme-color);
 }
 .sidebar-container .short-about img {
   width: 80%;
@@ -127,7 +130,7 @@
   background-color: #F5F5F5;
 }
 .side-catalog .catalog-body .active a {
-  color: #0085a1!important;
+  color: var(--theme-color)!important;
 }
 @media (max-width: 1200px) {
   .side-catalog {
@@ -145,7 +148,7 @@
   font-size: 14px;
   min-height: 14px;
   background-color: #323232;
-  background-color: #0085a1;
+  background-color: var(--theme-color);
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -595,7 +598,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 a img:hover,
 a img:focus {
@@ -672,7 +675,7 @@ samp {
 }
 .post-container a:hover,
 .post-container a:focus {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 .post-container h1,
 .post-container h2,
@@ -915,14 +918,14 @@ samp {
 }
 .navbar-custom.invert .navbar-brand:hover,
 .navbar-custom.invert .navbar-brand:focus {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 .navbar-custom.invert .nav li a {
   color: #404040;
 }
 .navbar-custom.invert .nav li a:hover,
 .navbar-custom.invert .nav li a:focus {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -953,14 +956,14 @@ samp {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: var(--theme-color);
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: var(--theme-color);
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -1130,7 +1133,7 @@ samp {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: var(--theme-color);
 }
 .post-preview > a > .post-title {
   font-size: 21px;
@@ -1158,7 +1161,7 @@ samp {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: var(--theme-color);
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -1180,7 +1183,7 @@ samp {
   color: #a3a3a3;
 }
 .post-content-preview:hover {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 @media only screen and (min-width: 768px) {
   .post-content-preview {
@@ -1220,7 +1223,7 @@ footer .copyright a {
 }
 footer .copyright a:hover,
 footer .copyright a:focus {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 .floating-label-form-group {
   font-size: 14px;
@@ -1267,7 +1270,7 @@ footer .copyright a:focus {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #0085a1;
+  color: var(--theme-color);
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -1292,8 +1295,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
   color: white;
 }
 .pager {
@@ -1329,8 +1332,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: var(--theme-color);
+  border: 1px solid var(--theme-color);
 }
 .pager li > a:hover > span,
 .pager li > a:focus > span {
@@ -1347,12 +1350,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: var(--theme-color);
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: var(--theme-color);
 }
 img::selection {
   color: white;
@@ -1436,7 +1439,7 @@ img::-moz-selection {
 #tag_cloud .tag:active,
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
-  background-color: #0085a1 !important;
+  background-color: var(--theme-color) !important;
 }
 #tag_cloud a.focus,
 #tag_cloud .tag.focus {
@@ -1445,7 +1448,7 @@ img::-moz-selection {
 #tag_cloud a.tag-button--all,
 #tag_cloud .tag.tag-button--all {
   font-weight: 700;
-  color: #0085a1!important;
+  color: var(--theme-color)!important;
 }
 #tag_cloud a.tag-button--all:hover,
 #tag_cloud .tag.tag-button--all:hover,
@@ -1472,7 +1475,7 @@ img::-moz-selection {
   margin-top: 0px;
 }
 .listing-seperator {
-  color: #0085a1;
+  color: var(--theme-color);
   font-size: 21px !important;
 }
 .listing-seperator::before {
