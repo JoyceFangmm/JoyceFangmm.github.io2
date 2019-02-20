@@ -74,6 +74,16 @@ kramdown:
 # Netease settings
 # netease_comment: false
 
+# Gitalk settings
+gitalk:
+  enable: false    #是否开启Gitalk评论
+  # clientID:                             #生成的clientID
+  # clientSecret:     #生成的clientSecret
+  repo: joycefangmm.github.io    #仓库名称
+  owner: joycefangmm    #github用户名
+  admin: joycefangmm
+  distractionFreeMode: true #是否启用类似FB的阴影遮罩
+
 
 
 # Analytics settings
