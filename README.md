@@ -1,4 +1,6 @@
-# Hux Blog
+# Joyce Blog
+
+### This blog changes from [Hux Blog](https://github.com/Huxpro/huxpro.github.io) 
 
 ### [View Live Hux Blog &rarr;](https://huangxuan.me)
 

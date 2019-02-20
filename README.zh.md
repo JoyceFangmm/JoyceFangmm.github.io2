@@ -1,7 +1,13 @@
-# Hux blog 模板
+# Joyce Blog 模板
 
-### [我的博客在这里 &rarr;](http://huxpro.github.io)
+### 本博客的搭建教程修改自 [Hux Blog](https://github.com/Huxpro/huxpro.github.io) 
 
+
+### [我的博客在这里 &rarr;](http://joycefangmm.github.io)
+
+### 以下是使用自[Hux Blog](https://github.com/Huxpro/huxpro.github.io)的说明
+
+---
 
 ### 关于收到"Page Build Warning"的email
 
