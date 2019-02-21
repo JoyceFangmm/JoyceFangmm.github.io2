@@ -76,9 +76,9 @@ kramdown:
 
 # Gitalk settings
 gitalk:
-  enable: false    #是否开启Gitalk评论
-  # clientID:                             #生成的clientID
-  # clientSecret:     #生成的clientSecret
+  enable: true    #是否开启Gitalk评论
+  clientID: e3407be01d4fdeb5fd73                           #生成的clientID
+  clientSecret: 6b1de3d60d14c0f3bf2ffb931ecc2991849cceea     #生成的clientSecret
   repo: joycefangmm.github.io    #仓库名称
   owner: joycefangmm    #github用户名
   admin: joycefangmm
