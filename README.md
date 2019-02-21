@@ -7,6 +7,7 @@
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 
 
+
 ## Boilerplate (beta)
 
 Want to clone a boilerplate instead of my buzz blog? Here comes this!  
