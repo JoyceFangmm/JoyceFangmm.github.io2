@@ -25,13 +25,13 @@ header-style: text
 展示隐藏文件
 
 1.  打开终端，输入
-{% highlight bash %}
+```shell
 defaults write com.apple.finder AppleShowAllFiles YES
-{% endhighlight %}
+```
 2.  然后`return`
 3.  重启`Finder`
 
 隐藏操作流程一样，只需要替换指令
-{% highlight bash %}
+```shell
 defaults write com.apple.finder AppleShowAllFiles NO
-{% endhighlight %}
+```
