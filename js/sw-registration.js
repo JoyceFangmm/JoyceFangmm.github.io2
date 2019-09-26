@@ -22,10 +22,10 @@ function handleRegistration(registration){
         console.log('SW is updated');
       } else {
         console.log('A Visit without previous SW');
-        createSnackbar({
-          message: 'App ready for offline use.',
-          duration: 3000
-        })
+        // createSnackbar({
+        //   message: 'App ready for offline use.',
+        //   duration: 3000
+        // })
       }
     };
   }
@@ -35,7 +35,7 @@ if(navigator.serviceWorker){
   // For security reasons, a service worker can only control the pages
   // that are in the same directory level or below it. That's why we put sw.js at ROOT level.
   navigator.serviceWorker
-    .register('/js/sw.js')
+    .register('/sw.js')
     .then((registration) => handleRegistration(registration))
     .catch((error) => {console.log('ServiceWorker registration failed: ', error)})
 
@@ -47,11 +47,11 @@ if(navigator.serviceWorker){
     
     if(data.command == "UPDATE_FOUND"){
       console.log("UPDATE_FOUND_BY_SW", data);
-      createSnackbar({
-        message: "Content updated.",
-        actionText:"refresh",
-        action: function(e){location.reload()}
-      })
+      // createSnackbar({
+      //   message: "Content updated.",
+      //   actionText:"refresh",
+      //   action: function(e){location.reload()}
+      // })
     }
   }
 }

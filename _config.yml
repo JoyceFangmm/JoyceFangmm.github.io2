@@ -1,42 +1,62 @@
 # Site settings
-title: "Joyce Blog" # the name of your site, e.g. ACME Corp.
-SEOTitle: 房梅梅的博客 | Joyce Blog  # 用于SEO搜索时使用，|分开关键词
-# header-img: #默认头部展示图片
-description: "房志梅 描述"  #用作书签页面的默认描述
-keyword: "房志梅 搜索关键词"
-url: "https://joycefangmm.github.io/myBlankBlog"              # your host, for absolute URL
+title: Joyce Blog
+SEOTitle: 房梅梅的博客 | Joyce Blog
+header-img: img/home-bg.jpg
+email: joycefangmm@gmail.com
+description: "Rome was not built in one day. "
+keyword: "房梅梅, Joyce, Joyce Fang, Kid, 房梅梅的博客, Joyce Blog, 博客, 互联网, iPhone, iOS, 前端"
+url: ""              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
-
 # Publish posts or collection documents with a future date.
-# ture未来时间的博客可以展示；false未来时间的博客不可以展示，直到时间发生才可以展示
-future: false
-
+future: true
 
 # SNS settings
 RSS: true
 # weibo_username:     
+# zhihu_username:     
 github_username:    joycefangmm
-twitter_username:   joycefangmm
-# linkedin_username:  
+twitter_username:   joycefang
+#facebook_username:  
+#linkedin_username:  firstname-lastname-idxxxx
+
 
 
 # Build settings
+# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
-permalink: pretty 
+permalink: pretty
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-anchorjs: true  
+exclude: 
+# - Gemfile
+# - Gemfile.lock
+ - less
+ - node_modules
+ - Gruntfile.js
+ - package.json
+ - README.md
+ - README.zh.md
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+# If you have timezone issue (e.g. #68) in China, uncomment to use this:
+#timezone: CN  
+
 
 
 # Gems
+# from PR#40, to support local preview for Jekyll 3.0
+# make sure you have this gem installed
 # `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-feed
+  - jekyll-paginate
+
 
 
 # Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown  #支持目录生成
+markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
   syntax_highlighter_opts:
@@ -47,7 +67,13 @@ kramdown:
       start_line: 1
 
 
-# 房志梅，等待验证
+
+# Disqus settings
+# disqus_username: hux
+
+# Netease settings
+# netease_comment: false
+
 # Gitalk settings
 gitalk:
   enable: true    #是否开启Gitalk评论
@@ -59,38 +85,51 @@ gitalk:
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
+
+# Analytics settings
+# Baidu Analytics 
+# ba_track_id: [your track id]
+
 # Google Analytics
 ga_track_id: 'UA-134920416-1'            # Format: UA-xxxxxx-xx
 ga_domain: joycefangmm.github.io
 
 
+
 # Sidebar settings
-sidebar: true         
-sidebar-about-description: "房志梅侧边栏文案描述"       # 侧边栏文案描述
-sidebar-avatar: /assets/img/avatar-joyce-ny.png      # 侧边栏，关于使用的图片, seeing it's used in both `/` and `/about/`
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "The journey of a thousand miles begins with one step. "
+sidebar-avatar: /img/avatar-joyce-ny.png      # use absolute URL, seeing it's used in both `/` and `/about/`
+
 
 
 # Featured Tags
-featured-tags: true                     # 是否展示
-featured-condition-size: 1              # 当tag数超过多少时展示
+# featured-tags: true                     # whether or not using Feature-Tags
+# featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
 
 
 # Progressive Web Apps
-chrome-tab-theme-color: "#ffffff"  #比如，WPA状态栏颜色
+chrome-tab-theme-color: "#000000"
 service-worker: true
 
-# MathJax，page预览可能存在，比如首页index，但大多数时候再预览中不会出现
+
+
+# MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
 
-# Friends，好友的博客地址，房志梅删除掉
-friends: [
-  {
-    title: "房志梅测试",
-    href: "https://www.bing.com"
-  },
-  {
-    title: "房志梅2测试",
-    href: "https://www.bing.com"
-  },
-]
+
+# Friends
+# friends: [
+#     {
+#     #     title: "Su",
+#     #     href: "http://su.gallery/"
+#     # },{
+#         title: "乱序",
+#         href: "http://mida.re/"
+#     },{
+#         title: "前端外刊评论",
+#         href: "http://qianduan.guru/"
+#     }
+# ]
