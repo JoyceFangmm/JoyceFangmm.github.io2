@@ -1,14 +1,26 @@
 <head>
+
+
+    <!-- 字符集 -->
     <meta charset="utf-8">
+    <!-- IE兼容性模式，地址https://www.jianshu.com/p/11adc0ef158e -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--  房志梅 显示本网站在google搜索结果中，content内容需要注册所得，地址https://support.google.com/webmasters/answer/34397?hl=zh-Hans -->
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <!-- 提供有关视口初始大小的提示，仅供移动设备使用 -->
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- 其中包含页面内容的简短和精确的描述。 一些浏览器，如Firefox和Opera，将其用作书签页面的默认描述 -->
     <meta name="description" content="{{ site.description }}">
+    <!-- 包含与逗号分隔的页面内容相关的单词 -->
     <meta name="keywords"  content="{{ site.keyword }}">
+    <!-- 要指定 Android 版 Chrome 的主题背景色，请使用元主题背景色。Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
-    
-    <!-- Open Graph -->
+
+
+    <!-- Open Graph Protocol -->
+    <!-- og是一种新的HTTP头部协议，地址https://www.kuanxu.com/seo/32.html -->
     <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}">
+    <!-- 常见语言中的 switch, case 在 Liquid 中的对应是 case, when。 -->
     {% case page.layout %}
     {% when 'post' %}
     <meta property="og:type" content="article">
@@ -29,40 +41,39 @@
     <meta property="og:image" content="{{ site.url }}{{ site.sidebar-avatar }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:site_name" content="{{ site.SEOTitle }}">
-    
+
+
     <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
 
-    <!-- Web App Manifest -->
+
+    <!-- Web App Manifest，地址https://developer.mozilla.org/zh-CN/docs/Web/Manifest -->
     <link rel="manifest" href="{{ site.baseurl }}/pwa/manifest.json">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+
+    <!-- Favicon，清楚缓存问题，快捷键Alt+Command+E，地址http://osxdaily.com/2019/01/23/show-website-favicons-safari-mac/，地址https://www.crifan.com/safari_how_clear_cache/ -->
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon.ico">
+
 
     <!-- Safari Webpage Icon  -->
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/img/apple-touch-icon.jpg">
-    
-    <!-- Canonical URL -->
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.jpg">
+
+
+    <!-- Canonical URL，地址https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+
+
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/hux-blog.css" | prepend: site.baseurl }}">
+    <!-- Third Party Custom CSS -->
+    <!-- 房志梅 重新生成min.css并且引用 -->
+    <link rel="stylesheet" href="{{ "/assets/css/hux-blog.css" | prepend: site.baseurl }}">
 
-    <!-- Custom Fonts -->
-    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
+
+    <!-- Third Party Custom Fonts -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
     <!-- ga & ba script hoook -->
     <script></script>
-</head>
+  </head>
